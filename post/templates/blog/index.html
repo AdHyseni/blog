@@ -1,0 +1,32 @@
+{% extends "base.html" %} 
+{%load static%}
+
+{%block title%}
+My Blog
+{%endblock%}
+{%block css_files%}
+<link rel='stylesheet' href={%static "blog/post.css"%}>
+<link rel='stylesheet' href={%static "blog/index.css"%}>
+{%endblock%}
+{%block content%}
+<section id="welcome">
+    <header >
+        <img src="{%static "blog/images/p.jpg"%}" alt="run-tech logo"/>
+        <h2><a href"">RunTechBlog</h2>
+    </header>
+    <p> This is the run tech blog</p>
+</section>
+<section id="latest-posts">
+<h2>My Post</h2>
+<ul>
+    {%for post in posts%}
+    {% include  "blog/includes/posts.html"%}
+    {%endfor%}
+</ul>
+</section>
+<section id='about'>
+<h2>What we do?</h2>
+<p>Lorem Ipsum</p>
+</section>
+
+{%endblock%}

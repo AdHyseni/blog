@@ -9,5 +9,6 @@ urlpatterns = [
     path("post/", views.AllPosts.as_view(),name='postimet'),
     #path("post/<slug:slug>", views.post_details, name='postimi'),
     path("post/<slug:slug>", views.PostDetails.as_view(), name='postimi'),
+    path('read-later', views.ReadLater.as_view(), name='read-later')
 
 ]
